@@ -1,7 +1,7 @@
 ## Syndicator
 
 To access the syndicator visit the following link:
-[Event Syndicator](http://ec2-18-236-89-7.us-west-2.compute.amazonaws.com/pulsd/)
+[Event Syndicator](http://ec2-18-236-89-7.us-west-2.compute.amazonaws.com/pulsd/){:target="_blank"}
 
 #### System Architecture
 
