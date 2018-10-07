@@ -1,4 +1,4 @@
-##Syndicator
+## Syndicator
 
 System Architecture
 
