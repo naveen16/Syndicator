@@ -2,7 +2,6 @@
 
 To access the syndicator visit the following link:
 <a href="http://ec2-18-236-89-7.us-west-2.compute.amazonaws.com/pulsd/" target="_blank">Event Syndicator</a>
-<!--[Event Syndicator](http://ec2-18-236-89-7.us-west-2.compute.amazonaws.com/pulsd/){:target="_blank"}-->
 
 #### System Architecture
 
@@ -35,9 +34,21 @@ CREATE TABLE event (
 ```
 Notes:
 1. eid is auto generated incrementally starting at 1
-2. published column holds 'Y' or 'N' indicating whether or not the event has been syndicated
+2. published column holds 'Y' or 'N' indicating whether or not the event has been syndicated, starts with value 'N'
 3. columns are the minimum required fields of each event website service
 
+#### Publishing to event sites
 
+Python program reads the mySQL databse for unpublished events and calls the event websites REST api to publish the event. After they are published the mySQL db is marked as published.
 
-#### Assumptions
+#### Cron job
+A cron job is set up on the server with the following specification:
+```
+*/5 * * * * /usr/bin/python /var/www/html/pulsd/eventbrite/SyndicateEvent.py
+```
+which runs the python program every 5 minutes.
+
+#### Assumptions/Comments
+
+1. Currently only syndicates events to Eventbrite
+2. Service is hosted on Amazon AWS server
