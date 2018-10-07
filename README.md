@@ -1,5 +1,8 @@
 ## Syndicator
 
+To access the syndicator visit the following link:
+[http://ec2-18-236-89-7.us-west-2.compute.amazonaws.com/pulsd/]
+
 #### System Architecture
 
 <p align="center">
@@ -29,5 +32,11 @@ CREATE TABLE event (
   PRIMARY KEY (eid)
 );
 ```
+Notes:
+1. eid is auto generated incrementally starting at 1
+2. published column holds 'Y' or 'N' indicating whether or not the event has been syndicated
+3. columns are the minimum required fields of each event website service
+
+
 
 #### Assumptions
