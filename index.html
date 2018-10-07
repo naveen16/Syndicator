@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Event Tester</title>
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="event.js">
+</script>
+<body>
+
+<h3>Create Event</h3>
+(Please make a note of the event ID to be used in below services)
+<form id="f1" method="POST" action="processAddEvent.php">
+Enter Event Name: <input type="text" name="event_name"><br />
+Enter Event Description: <input type="text" name="event_description"><br />
+Enter Start Time: <input type="text" name="start_time"><br />
+Enter Start TimeTZ: <select name="start_timeTZ">
+  <option value="America/New_York" selected>America/New_York</option>
+  <option value="America/Chicago">America/Chicago</option>
+  <option value="America/Denver">America/Denver</option>
+  <option value="America/Los_Angeles">Los_Angeles</option>
+</select><br />
+Enter End Time: <input type="text" name="end_time"><br />
+Enter End TimeTZ: <select name="end_timeTZ">
+  <option value="America/New_York" selected>America/New_York</option>
+  <option value="America/Chicago">America/Chicago</option>
+  <option value="America/Denver">America/Denver</option>
+  <option value="America/Los_Angeles">Los_Angeles</option>
+</select><br />
+Enter Currency: <input type="text" name="currency"><br />
+<input type="submit" value="Submit">
+</form>
+
+<h3>Get Event </h3>
+
+<form id="f2" method="GET" action="processGetEvent.php">
+Enter Event ID: <input type="text" name="eid"><br />
+<input type="submit" value="Submit">
+</form>
+
+<h3>Get all Events </h3>
+
+<form id="f3" method="GET" action="processGetEvents.php">
+<input type="submit" value="Submit">
+</form>
+<div id="div3"></div>
+
+</body>
+</html>
