@@ -11,9 +11,21 @@ $database="pulsd";
 
 $event_name=$_POST['event_name'];
 $event_description=$_POST['event_description'];
-$start_time=$_POST['start_time'];
+
+$start_date=$_POST['start_time'];
+$start_tme=$_POST['starttimepicker'];
+list($smonth, $sday, $syear) = explode('/', $start_date);
+$start_time = $syear."-".$smonth."-".$sday."T".$start_tme.":00Z";
+//echo $start_time;
+
 $start_timeTZ=$_POST['start_timeTZ'];
-$end_time=$_POST['end_time'];
+
+$end_date=$_POST['end_time'];
+$end_tme=$_POST['endtimepicker'];
+list($emonth, $eday, $eyear) = explode('/', $end_date);
+$end_time = $eyear."-".$emonth."-".$eday."T".$end_tme.":00Z";
+//echo $end_time;
+
 $end_timeTZ=$_POST['end_timeTZ'];
 $currency=$_POST['currency'];
 

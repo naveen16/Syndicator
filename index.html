@@ -1,33 +1,90 @@
 <html>
 <head>
 <title>Event Tester</title>
-<script
-src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="event.js">
-</script>
+<link rel="stylesheet" href="jquery-ui.css">
+<script src="jquery-1.12.4.js"></script>
+<script src="jquery-ui.js"></script>
+<script src="myScript.js"></script>
 <body>
 
 <h3>Create Event</h3>
 (Please make a note of the event ID to be used in below services)
+<P/>
+(All of these fields are mandatory to create an event)
 <form id="f1" method="POST" action="processAddEvent.php">
-Enter Event Name: <input type="text" name="event_name"><br />
-Enter Event Description: <input type="text" name="event_description"><br />
-Enter Start Time: <input type="text" name="start_time"><br />
-Enter Start TimeTZ: <select name="start_timeTZ">
+<P>Enter Event Name: <input type="text" name="event_name"><br />
+<P>Enter Event Description: <input type="text" name="event_description"><br />
+<P>Enter Start Date: <input type="text" name="start_time" id="startdatepicker"><br />
+<P>Enter Start Time:
+<select name="starttimepicker">
+<option value="00:00" selected>Midnight</option>
+<option value="01:00">01:00 AM</option>
+<option value="02:00">02:00 AM</option>
+<option value="03:00">03:00 AM</option>
+<option value="04:00">04:00 AM</option>
+<option value="05:00">05:00 AM</option>
+<option value="06:00">06:00 AM</option>
+<option value="07:00">07:00 AM</option>
+<option value="08:00">08:00 AM</option>
+<option value="09:00">09:00 AM</option>
+<option value="10:00">10:00 AM</option>
+<option value="11:00">11:00 AM</option>
+<option value="12:00">Noon</option>
+<option value="13:00">01:00 PM</option>
+<option value="14:00">02:00 PM</option>
+<option value="15:00">03:00 PM</option>
+<option value="16:00">04:00 PM</option>
+<option value="17:00">05:00 PM</option>
+<option value="18:00">06:00 PM</option>
+<option value="19:00">07:00 PM</option>
+<option value="20:00">08:00 PM</option>
+<option value="21:00">09:00 PM</option>
+<option value="22:00">10:00 PM</option>
+<option value="23:00">11:00 PM</option>
+</select>
+<br />
+<P>Enter Start TimeTZ: <select name="start_timeTZ">
   <option value="America/New_York" selected>America/New_York</option>
   <option value="America/Chicago">America/Chicago</option>
   <option value="America/Denver">America/Denver</option>
   <option value="America/Los_Angeles">Los_Angeles</option>
 </select><br />
-Enter End Time: <input type="text" name="end_time"><br />
-Enter End TimeTZ: <select name="end_timeTZ">
+<P>Enter End Date: <input type="text" name="end_time" id="enddatepicker"><br />
+<P>Enter End Time:
+<select name="endtimepicker">
+<option value="00:00" selected>Midnight</option>
+<option value="01:00">01:00 AM</option>
+<option value="02:00">02:00 AM</option>
+<option value="03:00">03:00 AM</option>
+<option value="04:00">04:00 AM</option>
+<option value="05:00">05:00 AM</option>
+<option value="06:00">06:00 AM</option>
+<option value="07:00">07:00 AM</option>
+<option value="08:00">08:00 AM</option>
+<option value="09:00">09:00 AM</option>
+<option value="10:00">10:00 AM</option>
+<option value="11:00">11:00 AM</option>
+<option value="12:00">Noon</option>
+<option value="13:00">01:00 PM</option>
+<option value="14:00">02:00 PM</option>
+<option value="15:00">03:00 PM</option>
+<option value="16:00">04:00 PM</option>
+<option value="17:00">05:00 PM</option>
+<option value="18:00">06:00 PM</option>
+<option value="19:00">07:00 PM</option>
+<option value="20:00">08:00 PM</option>
+<option value="21:00">09:00 PM</option>
+<option value="22:00">10:00 PM</option>
+<option value="23:00">11:00 PM</option>
+</select>
+<P>Enter End TimeTZ: <select name="end_timeTZ">
   <option value="America/New_York" selected>America/New_York</option>
   <option value="America/Chicago">America/Chicago</option>
   <option value="America/Denver">America/Denver</option>
   <option value="America/Los_Angeles">Los_Angeles</option>
 </select><br />
-Enter Currency: <input type="text" name="currency"><br />
-<input type="submit" value="Submit">
+<P>Enter Currency: <input type="text" name="currency"><br />
+<P><input type="submit" value="Submit">
 </form>
 
 <h3>Get Event </h3>
