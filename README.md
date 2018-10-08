@@ -50,6 +50,6 @@ which runs the python program every 5 minutes.
 
 #### Assumptions/Comments
 
-1. Currently only syndicates events to Eventbrite
+1. Currently only syndicates events to Eventbrite, extra columns not used by eventbrite are unused
 2. Service is hosted on Amazon AWS server
 3. Assumes user inputs all mandatory fields and end time is after start time
