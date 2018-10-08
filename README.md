@@ -56,3 +56,4 @@ which runs the python program every 5 minutes.
 3. Events added to eventbrite are added as drafts and not made public to avoid clutter on their webpage
 4. Service is hosted on Amazon AWS server
 5. Assumes user inputs all mandatory fields and end time is after start time
+6. DB currently has a few events in it 
