@@ -51,6 +51,8 @@ which runs the python program every 5 minutes.
 #### Assumptions/Comments
 
 1. Currently only syndicates events to Eventbrite, extra columns not used by eventbrite are unused
-2. Events added to eventbrite are added as drafts and not made public to avoid clutter on their webpage
-3. Service is hosted on Amazon AWS server
-4. Assumes user inputs all mandatory fields and end time is after start time
+2. Unable to syndicate to any other event website. Found api's for a few(ticketmaster.com,seatgeek.com), but they only allowed GET's 
+   and did not allow for adding new events.
+3. Events added to eventbrite are added as drafts and not made public to avoid clutter on their webpage
+4. Service is hosted on Amazon AWS server
+5. Assumes user inputs all mandatory fields and end time is after start time
