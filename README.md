@@ -3,6 +3,9 @@
 To access the syndicator visit the following link:
 <a href="http://ec2-18-236-89-7.us-west-2.compute.amazonaws.com/pulsd/" target="_blank">Event Syndicator</a>
 
+To verify events are syndicated to eventbrite please use the following link:
+<a href="https://www.eventbriteapi.com/v3/users/me/owned_events/?token=E2SYBS6O3VR3JNBYHV4Y" target="_blank">Naveen's Created Events on Eventbrite</a>
+
 #### System Architecture
 
 <p align="center">
