@@ -52,3 +52,4 @@ which runs the python program every 5 minutes.
 
 1. Currently only syndicates events to Eventbrite
 2. Service is hosted on Amazon AWS server
+3. Assumes user inputs all mandatory fields and end time is after start time
