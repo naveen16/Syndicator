@@ -6,7 +6,7 @@ To access the syndicator visit the following link:
 To verify events are syndicated to eventbrite please use the following link:
 <a href="https://www.eventbriteapi.com/v3/users/me/owned_events/?token=E2SYBS6O3VR3JNBYHV4Y" target="_blank">Naveen's Created Events on Eventbrite</a>
 
-Another way to view the syndicated events is to run `Syndicator/eventbrite/GetEvents.py`.(note: you will need python and python requests package installed). This program will print the event names.
+Another way to view the syndicated events is to run `Syndicator/eventbrite/GetEvents.py` (note: you will need python and python requests package installed). This program will print the event names.
 
 #### System Architecture
 
