@@ -25,6 +25,7 @@ $start_timeTZ=$row["start_timeTZ"];
 $end_time=$row["end_time"];
 $end_timeTZ=$row["end_timeTZ"];
 $currency=$row["currency"];
+$price=$row["price"];
 $venue_id=$row["venue_id"];
 $test_event=$row["test_event"];
 $published=$row["published"];
@@ -67,6 +68,10 @@ $published=$row["published"];
 <tr>
 <td> <font face="Arial, Helvetica, sans-serif">CURRENCY</font> </td>
 <td> <?php echo $currency; ?> </td>
+</tr>
+<tr>
+<td> <font face="Arial, Helvetica, sans-serif">Price</font> </td>
+<td> <?php echo $price; ?> </td>
 </tr>
 <tr>
 <td> <font face="Arial, Helvetica, sans-serif">VENUE ID</font> </td>

@@ -28,6 +28,8 @@ $end_time = $eyear."-".$emonth."-".$eday."T".$end_tme.":00Z";
 
 $end_timeTZ=$_POST['end_timeTZ'];
 $currency=$_POST['currency'];
+$price=$_POST['price'];
+$venue_id=$_POST['venue_id'];
 
 $link = mysqli_connect("localhost",$username,$password);
 mysqli_select_db($link,$database);
@@ -38,14 +40,16 @@ if ($num == 0)
   $eid = 1;
 else
   $eid = $row["maxx"] + 1;
-$query="INSERT INTO event (eid,event_name,event_description,start_time,start_timeTZ,end_time,end_timeTZ,currency,published) VALUES ($eid,'"
+$query="INSERT INTO event (eid,event_name,event_description,start_time,start_timeTZ,end_time,end_timeTZ,currency,price,venue_id,published) VALUES ($eid,'"
        .$event_name."','"
        .$event_description."','"
        .$start_time."','"
        .$start_timeTZ."','"
        .$end_time."','"
        .$end_timeTZ."','"
-       .$currency."','N')";
+       .$currency."','"
+       .$price."','"
+       .$venue_id."','N')";
 print($query);
 $result=mysqli_query($link,$query);
 mysqli_close($link);
