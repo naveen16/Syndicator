@@ -3,6 +3,11 @@
 To access the syndicator visit the following link:
 <a href="http://ec2-18-236-89-7.us-west-2.compute.amazonaws.com/pulsd/" target="_blank">Event Syndicator</a>
 
+To verify events are syndicated to eventbrite please use the following link:
+<a href="https://www.eventbriteapi.com/v3/users/me/owned_events/?token=E2SYBS6O3VR3JNBYHV4Y" target="_blank">Naveen's Created Events on Eventbrite</a>
+
+Another way to view the syndicated events is to run `Syndicator/eventbrite/GetEvents.py` (note: you will need python and python requests package installed). This program will print the event names.
+
 #### System Architecture
 
 <p align="center">
@@ -51,5 +56,9 @@ which runs the python program every 5 minutes.
 #### Assumptions/Comments
 
 1. Currently only syndicates events to Eventbrite, extra columns not used by eventbrite are unused
-2. Service is hosted on Amazon AWS server
-3. Assumes user inputs all mandatory fields and end time is after start time
+2. Unable to syndicate to any other event website. Found api's for a few(ticketmaster.com,seatgeek.com), but they only allowed GET's 
+   and did not allow for adding new events.
+3. Events added to eventbrite are added as drafts and not made public to avoid clutter on their webpage
+4. Service is hosted on Amazon AWS server
+5. Assumes user inputs all mandatory fields and end time is after start time
+6. DB currently has a few events in it 
